@@ -1,9 +1,8 @@
-import React from 'react'
 import HOME_IMAGE from "../utils/assets/home_image.jpg";
 
 const MainContainer = () => {
   return (
-    <div className="py-10 px-5 bg-[#024950] flex dark:bg-slate-800">
+    <div className="py-10 px-5 bg-[#024950] flex">
       <img
         className="border-2 w-1/2 rounded-lg object-cover"
         src={HOME_IMAGE}
