@@ -25,4 +25,10 @@ export const PRESENT_STATISTICS = [
     dataDetail: "Countires",
     data: "109",
   },
+  {
+    key: 4,
+    iconClass: "fa-solid fa-product-hunt",
+    dataDetail: "Products",
+    data: "40+",
+  },
 ];

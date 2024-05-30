@@ -1,6 +1,8 @@
 const Shimmer = () => {
   return (
-    <div>Shimmer</div>
+    <div className="rounded-xl w-60 h-72 bg-gray-100">
+     
+    </div>
   )
 }
 

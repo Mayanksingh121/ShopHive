@@ -9,7 +9,7 @@ const useGetTrendingData = () => {
   }, []);
 
 const getTrendingData = async () => {
-  const data = await fetch("https://dummyjson.com/products?limit=6&skip=5");
+  const data = await fetch("https://dummyjson.com/products?limit=10&skip=5");
   const json = await data.json();
   dispatch(addTrendingProducts(json));
 }};

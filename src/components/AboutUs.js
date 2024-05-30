@@ -9,7 +9,7 @@ import ABOUT_US from "../utils/assets/aboutUs.jpg";
 
 const AboutUs = () => {
   return (
-    <div className="grid grid-cols-12 mt-5 p-2">
+    <div id="about" className="grid grid-cols-12 mt-5 p-2">
       <div className="col-span-9 p-4">
         <h2 className="font-display text-2xl">About us</h2>
         <p className="font-body pt-6 pb-3">{ABOUTUS_FIRST}</p>
