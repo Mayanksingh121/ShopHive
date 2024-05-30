@@ -13,10 +13,10 @@ const Header = () => {
             Trending
           </li>
           <li className="hidden md:block px-4 hover:text-[#63cec4] cursor-pointer">
-            Cart <i class="fa-solid fa-cart-shopping"></i>
+            Cart <i className="fa-solid fa-cart-shopping"></i>
           </li>
           <li className="cursor-pointer">
-            <i class="md:hidden fa-solid fa-bars cursor-pointer"></i>
+            <i className="md:hidden fa-solid fa-bars cursor-pointer"></i>
           </li>
         </ul>
       </div>

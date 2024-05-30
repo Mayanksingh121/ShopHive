@@ -1,8 +1,8 @@
 export const ABOUTUS_FIRST =
-  "ShopHive was born from a buzzing belief: everyone deserves a wardrobe that inspires confidence and ignites self-expression. We're not just another clothing and accessories store; we're a hive of curated style, where you can discover unique pieces that reflect your individuality.";
+  "ShopHive was born from a buzzing belief: everyone deserves to indulge in products that inspire confidence and ignite self-expression. We're not just another online store; we're a hive of curated essentials, where you can discover unique pieces that reflect your individuality.";
 
 export const ABOUTUS_SECOND =
-  "Curated with Heart. We curate a collection. Our team meticulously selects each piece, ensuring it aligns with our values and reflects the latest trends while maintaining a timeless appeal. A Hive of Inspiratio, we're passionate about fashion sharing our knowledge. Explore our blog and social media for style tips, outfit ideas, and trend insights to help you create a wardrobe you love. Community Focus, shopHive is more than just a store; it's a community. We value your feedback. Join the conversation and connect with fellow fashion enthusiasts!";
+  "We curate a diverse collection of products ranging from clothing and accessories to food, perfumes, makeup, and more. Our team meticulously selects each item, ensuring it aligns with our values and reflects the latest trends while maintaining a timeless appeal. We're passionate about sharing our knowledge and love for quality products. Explore our blog and social media for style tips, recipe ideas, beauty hacks, and trend insights to help you create a lifestyle you love.";
 
 export const SECOND_HEADING = "What makes ShopHive buzz with excitement?";
 

@@ -13,7 +13,7 @@ const MainContainer = () => {
           Your One-Stop Shop for Everything
         </h1>
         <h2 className="font-display text-[#63CEC4] font-semibold text-xl my-4">
-          Get Amazing clothings and accessories at your door steps
+        Discover Incredible Deals on Clothing, Food, Perfumes, Makeup, and More – Delivered Right to Your Doorstep!
         </h2>
         <button className="border border-[#63CEC4] text-[#63CEC4] p-4 hover:border-2 mt-2">
           See all
