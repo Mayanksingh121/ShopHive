@@ -6,11 +6,9 @@ const Header = () => {
   const productPage = useSelector((store) => store.product.onProductsPage);
   const dispatch = useDispatch();
 
-  const handleClickHome = ()=>{
+  const handleClickHome = () => {
     dispatch(toggleOnProductsPage());
-  }
-
-
+  };
 
   return (
     <div className=" border-black border-b-2 font-display bg-[#024950] flex justify-between text-white px-10 py-5">
@@ -34,11 +32,13 @@ const Header = () => {
           )}
 
           {productPage && (
-            <li onClick={handleClickHome} className="hidden md:block px-4 hover:text-[#63cec4] cursor-pointer">
+            <li
+              onClick={handleClickHome}
+              className="hidden md:block px-4 hover:text-[#63cec4] cursor-pointer"
+            >
               Home
             </li>
           )}
-
 
           <li className="hidden md:block px-4 hover:text-[#63cec4] cursor-pointer">
             Cart <i className="fa-solid fa-cart-shopping"></i>

@@ -5,11 +5,12 @@ import Shimmer from "./Shimmer";
 
 const Trending = () => {
   useGetTrendingData();
+
   const trendingData = useSelector(
     (store) => store.product?.trendingProducts?.products
   );
 
-  const shimmerCount=10;
+  const shimmerCount = 10;
 
   return (
     <div id="trending" className="p-6">
@@ -20,7 +21,7 @@ const Trending = () => {
               return <ProductCard key={product.id} product={product} />;
             })
           : Array.from({ length: shimmerCount }).map((_, index) => (
-              <Shimmer key={index} />
+              <Shimmer classes="w-60 h-72" key={index} />
             ))}
       </div>
     </div>
