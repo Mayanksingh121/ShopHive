@@ -1,15 +1,26 @@
+
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
+import { addToCart } from "../utils/cartSlice";
+
 
 const ProductCard = ({ product }) => {
 
+  const dispatch = useDispatch();
+
   const handleAddItem = () => {
-    toast.success("added");
+    dispatch(addToCart(product));
+    toast.success("Item added to your cart!");
   };
+
+  const handleProductDetailsClick = ()=>{
+      
+  }
 
   return (
     <div className="rounded-xl border shadow-lg w-60">
-      <div className="bg-[#54c8bb] w-60 flex items-center justify-center rounded-t-xl">
+      <div className="bg-gradient-to-br from-[#6dccc1] to-[#168376] w-60 flex items-center justify-center rounded-t-xl">
         <img className="h-36" src={product.images[0]} alt="productImage"></img>
       </div>
       <div className="p-2">
@@ -26,15 +37,15 @@ const ProductCard = ({ product }) => {
           <p className="font-bold text-lg">${product.price}</p>
           <button
             onClick={handleAddItem}
-            className="bg-[#54c8bb] rounded-3xl px-3 py-2 text-black font-semibold hover:bg-[#024950] hover:text-white"
+            className="bg-[#42ab9f] rounded-3xl px-3 py-2 text-black font-semibold hover:bg-[#024950] hover:text-white"
           >
             Add to cart
           </button>
         </div>
       </div>
-      <div className="bg-[#54c8bb] w-full rounded-b-xl flex justify-center">
+      <div className="w-full rounded-b-xl flex justify-center">
         <Link to={"/products/" + product.id}>
-          <button className="hover:text-white  cursor-pointer text-center font-body font-medium">
+          <button onClick={handleProductDetailsClick} className="cursor-pointer text-center font-body font-medium">
             Get Product Details
           </button>
         </Link>

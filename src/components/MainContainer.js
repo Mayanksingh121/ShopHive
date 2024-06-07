@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import HOME_IMAGE from "../utils/assets/home_image.jpg";
 import { useDispatch } from "react-redux";
 import { toggleOnProductsPage } from "../utils/productSlice";
@@ -25,14 +24,12 @@ const MainContainer = () => {
           Discover Incredible Deals on Clothing, Food, Perfumes, Makeup, and
           More – Delivered Right to Your Doorstep!
         </h2>
-        <Link to="/allProducts">
-          <button
-            onClick={handleButton}
-            className="border border-[#63CEC4] text-[#63CEC4] p-4 hover:border-2 mt-2"
-          >
-            See all
-          </button>
-        </Link>
+        <button
+          onClick={handleButton}
+          className="border border-[#63CEC4] text-[#63CEC4] p-4 hover:border-2 mt-2"
+        >
+          See all
+        </button>
       </div>
     </div>
   );

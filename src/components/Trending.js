@@ -13,7 +13,7 @@ const Trending = () => {
   const shimmerCount = 10;
 
   return (
-    <div id="trending" className="p-6">
+    <div id="trending" className="p-6 ">
       <h2 className="font-display text-2xl">Trending</h2>
       <div className="grid gap-8 md:grid-cols-4 py-6">
         {trendingData

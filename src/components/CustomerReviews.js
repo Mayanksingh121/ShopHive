@@ -9,7 +9,7 @@ const CustomerReviews = () => {
       </h2>
       <div className="flex flex-col lg:grid lg:grid-rows-1 lg:grid-cols-3 gap-4 mt-4 ">
         {CUSTOMER_REVIEWS.map((review) => {
-          return <CustomerReviewCard review={review} />;
+          return <CustomerReviewCard key={review.id} review={review} />;
         })}
       </div>
     </div>

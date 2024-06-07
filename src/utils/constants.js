@@ -35,16 +35,19 @@ export const PRESENT_STATISTICS = [
 
 export const CUSTOMER_REVIEWS = [
   {
+    id: 1,
     name: "Jonathan Amral",
     comment:
       "I recently bought some makeup from Shophive, and I'm very pleased with the products. The site is easy to navigate, and the checkout process is straightforward. The only thing I'd suggest is adding a live chat support feature for quicker assistance.",
   },
-  {
+  { 
+    id:2,
     name: "Alexendra Botez",
     comment:
       "Shophive has an impressive range of food items. The quality is always top-notch, and delivery is quick. However, I think the website could benefit from more detailed product descriptions, especially for furniture items. I just love ShopHive",
   },
   {
+    id: 3,
     name: "Tania Sachdev",
     comment:
       "I love the variety of products available on Shophive! From makeup to furniture, I can find everything I need in one place. The user interface is smooth, and the search functionality is quite efficient. Definitely my go-to site for online shopping!",
