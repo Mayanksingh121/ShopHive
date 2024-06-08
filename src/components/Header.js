@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-scroll";
 import { toggleOnProductsPage } from "../utils/productSlice";
 
-const Header = () => {
+const Header = ({ handleCart }) => {
   const productPage = useSelector((store) => store.product.onProductsPage);
   const dispatch = useDispatch();
 
@@ -40,8 +40,12 @@ const Header = () => {
             </li>
           )}
 
-          <li className="hidden md:block px-4 hover:text-[#63cec4] cursor-pointer">
-            Cart <i className="fa-solid fa-cart-shopping"></i>
+
+          <li onClick={handleCart}
+            className="hidden md:flex px-4 hover:text-[#63cec4] cursor-pointer"
+          >
+            <i className="fa-solid fa-cart-shopping">
+            </i>
           </li>
           <li className="cursor-pointer">
             <i className="md:hidden fa-solid fa-bars cursor-pointer"></i>

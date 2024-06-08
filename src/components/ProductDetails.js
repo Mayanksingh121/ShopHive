@@ -1,20 +1,24 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import Shimmer from "./Shimmer";
 import useGetAllProducts from "../hooks/useGetAllProducts";
 import ProductReviewCard from "./ProductReviewCard";
 import { toast } from "react-toastify";
+import { addToCart } from "../utils/cartSlice";
 
 const ProductDetails = () => {
   useGetAllProducts();
+
   const { productId } = useParams();
+  const dispatch = useDispatch();
 
   const data = useSelector((store) => store.product?.allProducts?.products);
   const reqProduct = data?.find((product) => product.id === Number(productId));
 
   const handleAddToCart = () => {
-    toast.success("added");
+    dispatch(addToCart(reqProduct));
+    toast.success("Item added to cart!");
   };
 
   return (

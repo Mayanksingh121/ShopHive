@@ -11,7 +11,9 @@ const Body = () => {
   return (
     <div>
       {onProduct ? (
-        <AllProducts />
+        <>
+          <AllProducts />
+        </>
       ) : (
         <>
           <MainContainer />
