@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import BillContainer from "./BillContainer";
 import { useSelector } from "react-redux";
+import CartItem from "./CartItem";
+import EMPTY from "../utils/assets/empty.jpg";
 
 const CartModal = ({ handleCart }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -18,7 +20,7 @@ const CartModal = ({ handleCart }) => {
       }`}
     >
       <div
-        className={`bg-white w-[90%] h-[90%] mx-auto my-8 overflow-y-scroll transition-all duration-500 transform ${
+        className={`bg-white w-[80%] h-[90%] mx-auto my-8 overflow-y-scroll transition-all duration-500 transform ${
           isVisible ? "translate-y-0" : "-translate-y-40"
         }`}
       >
@@ -30,10 +32,20 @@ const CartModal = ({ handleCart }) => {
             </span>
           </div>
 
-          <div className="flex justify-between mx-10 my-4">
-            <div className="">Hi</div>
-            <div className="w-[40%] border border-gray-300 rounded-xl shadow-xl px-5 p-3">
-              <BillContainer items={items}/>
+          <div className="flex justify-between mx-10 my-4 gap-8">
+            <div className="w-full flex flex-col gap-4">
+              {items.length>0
+                ? items.map((item) => {
+                    return <CartItem key={item.id} item={item} />;
+                  })
+                : (<div className="flex flex-col items-center w-full gap-6">
+                  <p className="font-body font-medium text-xl">Your cart is empty</p>
+                  <img className="w-56" src={EMPTY} alt="empty"/>
+                </div> )
+                }
+            </div>
+            <div className="h-72 w-[70%] border border-gray-300 rounded-xl shadow-xl px-5 py-3">
+              <BillContainer items={items} />
             </div>
           </div>
         </div>

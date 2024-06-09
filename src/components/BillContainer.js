@@ -13,7 +13,7 @@ const BillContainer = ({ items }) => {
   };
 
   const totalItems = items.reduce(getTotalItems,0);
-  const totalPrice = items.reduce(getTotalPrice, 0).toFixed(2);
+  const totalPrice = items.reduce(getTotalPrice, 0).toFixed();
 
   return (
     <>
@@ -37,10 +37,11 @@ const BillContainer = ({ items }) => {
           <h2 className="font-body text-lg">Total:</h2>
           <h2 className="font-body text-lg">${totalPrice}</h2>
         </div>
-        <div className="flex justify-center pt-2 pb-4">
+        <div className="text-center pt-2 pb-4">
           <button className="font-semibold font-body bg-[#02bf5d] px-20 py-2 rounded-full hover:bg-[#46e091]">
             Checkout
           </button>
+          <p className="py-2 font-body text-sm font-medium">This Site is protected by google Privacy Policy and Terms of Services.</p>
         </div>
       </div>
     </>
