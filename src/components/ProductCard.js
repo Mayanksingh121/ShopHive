@@ -20,7 +20,7 @@ const ProductCard = ({ product }) => {
 
   return (
     <div className="rounded-xl border shadow-lg w-60">
-      <div className="bg-gradient-to-br from-[#6dccc1] to-[#168376] w-60 flex items-center justify-center rounded-t-xl">
+      <div className="w-60 flex items-center justify-center rounded-t-xl">
         <img className="h-36" src={product.images[0]} alt="productImage"></img>
       </div>
       <div className="p-2">
