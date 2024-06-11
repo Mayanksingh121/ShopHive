@@ -19,7 +19,7 @@ const ProductCard = ({ product }) => {
   }
 
   return (
-    <div className="rounded-xl border shadow-lg w-60">
+    <div className="rounded-xl border shadow-md w-60">
       <div className="w-60 flex items-center justify-center rounded-t-xl">
         <img className="h-36" src={product.images[0]} alt="productImage"></img>
       </div>
@@ -37,7 +37,7 @@ const ProductCard = ({ product }) => {
           <p className="font-bold text-lg">${product.price}</p>
           <button
             onClick={handleAddItem}
-            className="bg-[#42ab9f] rounded-3xl px-3 py-2 text-black font-semibold hover:bg-[#024950] hover:text-white"
+            className="bg-[#0d3992] rounded-3xl px-3 py-2 text-white font-semibold"
           >
             Add to cart
           </button>

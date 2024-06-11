@@ -12,7 +12,7 @@ const AllProducts = () => {
   const shimmerCount = 30;
   return (
     <div className="flex flex-col w-full justify-center">
-      <h2 className="my-10 text-2xl font-display font-medium text-center">
+      <h2 className="my-4 text-2xl font-display font-medium text-center">
         Our Products
       </h2>
       <div className="grid gap-8 md:grid-cols-4 py-6 w-[90%] m-auto">
