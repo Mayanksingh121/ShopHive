@@ -13,19 +13,19 @@ const MainContainer = () => {
   };
 
   return (
-    <div className="rounded-b-2xl py-3 px-5 flex justify-evenly">
-      <div>
+    <div className="pt-4 px-3 md:py-3 md:px-5 flex justify-evenly gap-3 md:gap-0">
+      <div className="hidden md:flex">
       <img
         className="rounded-3xl"
         src={HOME_IMAGE}
         alt="home"
       ></img>
       </div>
-      <div className="text-center items-center py-16 px-6 flex flex-col gap-4">
-        <h1 className="font-display font-bold text-6xl my-4">
-          <span className="font-normal">Your </span>One-Stop Shop for <spna className="font-normal">Everything</spna>
+      <div className="text-center items-center lg:py-16 lg:px-6 flex flex-col gap-2 md:gap-4">
+        <h1 className="font-display font-bold md:text-6xl md:my-4">
+          <span className="font-normal">Your </span>One-Stop Shop for <span className="font-normal">Everything</span>
         </h1>
-        <h2 className="font-display text-xl my-4">
+        <h2 className="font-display text-sm md:text-xl md:my-4">
           Discover Incredible Deals on Clothing, Food, Perfumes, Makeup, and
           More – Delivered Right to Your Doorstep!
         </h2>
@@ -35,7 +35,7 @@ const MainContainer = () => {
         >
           See all
         </button>
-        <h3 className="font-body flex flex-col text-xl">Special Dsicount <span className="text-xl font-bold">UP TO 50% OFF FOR ALL ITEMS</span></h3>
+        <h3 className="font-body flex flex-col text-sm md:text-xl">Special Dsicount <span className="md:text-xl font-bold">UP TO 50% OFF FOR ALL ITEMS</span></h3>
       </div>
       <div className="flex flex-col gap-4">
         <div>

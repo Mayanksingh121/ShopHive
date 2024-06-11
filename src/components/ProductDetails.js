@@ -5,10 +5,12 @@ import Shimmer from "./Shimmer";
 import useGetAllProducts from "../hooks/useGetAllProducts";
 import ProductReviewCard from "./ProductReviewCard";
 import { toast } from "react-toastify";
-import { addToCart } from "../utils/cartSlice";
+import { addToCart, removeFromCart } from "../utils/cartSlice";
+import { useState } from "react";
 
 const ProductDetails = () => {
   useGetAllProducts();
+  const [itemAdded, setItemAdded] = useState(false);
 
   const { productId } = useParams();
   const dispatch = useDispatch();
@@ -16,9 +18,16 @@ const ProductDetails = () => {
   const data = useSelector((store) => store.product?.allProducts?.products);
   const reqProduct = data?.find((product) => product.id === Number(productId));
 
-  const handleAddToCart = () => {
-    dispatch(addToCart(reqProduct));
-    toast.success("Item added to cart!");
+  const handleClick = () => {
+    if (itemAdded) {
+      dispatch(removeFromCart(reqProduct));
+      setItemAdded(false);
+      toast.success("Item Removed!");
+    } else {
+      setItemAdded(true);
+      dispatch(addToCart(reqProduct));
+      toast.success("Item added to cart!");
+    }
   };
 
   return (
@@ -68,13 +77,15 @@ const ProductDetails = () => {
             <div className="flex gap-5 items-center mt-2">
               <p className="text-lg">{reqProduct.availabilityStatus}</p>
               <button
-                onClick={handleAddToCart}
-                className=" text-white px-4 py-2 mr-10 bg-[#024950] rounded-lg"
+                onClick={handleClick}
+                className={`text-white px-4 py-2 mr-10 ${
+                  itemAdded ? "bg-[#f63a2f]" : "bg-[#0e3a93]"
+                } rounded-lg`}
               >
-                Add to cart
+                {itemAdded ? "Remove Item" : "Add to cart"}
               </button>
             </div>
-            <p className="mt-2 font-medium text-lg">Reviews: </p>
+            <p className="my-4 font-medium text-lg">Reviews: </p>
             <div className="flex gap-5">
               {reqProduct.reviews.map((review, index) => {
                 return <ProductReviewCard key={index} review={review} />;

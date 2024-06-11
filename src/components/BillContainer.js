@@ -38,7 +38,7 @@ const BillContainer = ({ items }) => {
           <h2 className="font-body text-lg">${totalPrice}</h2>
         </div>
         <div className="text-center pt-2 pb-4">
-          <button className="font-semibold font-body bg-[#02bf5d] px-20 py-2 rounded-full hover:bg-[#46e091]">
+          <button className="font-semibold font-body text-white  bg-[#0e3a93] px-20 py-2 rounded-full ">
             Checkout
           </button>
           <p className="py-2 font-body text-sm font-medium">This Site is protected by google Privacy Policy and Terms of Services.</p>

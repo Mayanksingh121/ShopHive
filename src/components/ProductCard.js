@@ -1,51 +1,63 @@
-
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
-import { addToCart } from "../utils/cartSlice";
-
+import { addToCart, removeFromCart } from "../utils/cartSlice";
+import { useState } from "react";
 
 const ProductCard = ({ product }) => {
+  const [itemAdded, setItemAdded] = useState(false);
 
   const dispatch = useDispatch();
 
-  const handleAddItem = () => {
-    dispatch(addToCart(product));
-    toast.success("Item added to your cart!");
+  const handleClick = () => {
+    if (itemAdded) {
+      dispatch(removeFromCart(product));
+      setItemAdded(false);
+      toast.success("Item Removed!");
+    } else {
+      dispatch(addToCart(product));
+      setItemAdded(true);
+      toast.success("Item added to your cart!");
+    }
   };
 
-  const handleProductDetailsClick = ()=>{
-      
-  }
+  const handleProductDetailsClick = () => {};
 
   return (
     <div className="rounded-xl border shadow-md w-60">
-      <div className="w-60 flex items-center justify-center rounded-t-xl">
+      <div className="bg-gradient-to-br from-[#5372b1] to-[#0e3a93]  w-60 flex items-center justify-center rounded-t-xl">
         <img className="h-36" src={product.images[0]} alt="productImage"></img>
       </div>
       <div className="p-2">
-        <h3 className="font-display font-semibold h-12">{product.title}</h3>
+        <h3 className="font-body font-medium text-[#5e666b] h-12 text-sm">
+          {product.title}
+        </h3>
         <p>
-          <span className="mr-2 px-2 py-1 rounded-xl text-sm border border-[#d8f1ee]">
+          <span className="mr-2 px-2 py-1 rounded-xl text-sm border text-[#5e666b] border-[#d8f1ee]">
             {product.tags[0]}
           </span>
-          <span className="px-2 py-1 rounded-xl text-sm border border-[#d8f1ee]">
+          <span className="px-2 py-1 rounded-xl text-sm border text-[#5e666b] border-[#d8f1ee]">
             {product.tags[1]}
           </span>
         </p>
-        <div className="flex justify-between items-center my-4">
+        <div className="flex justify-between items-center my-4 pr-1">
           <p className="font-bold text-lg">${product.price}</p>
           <button
-            onClick={handleAddItem}
-            className="bg-[#0d3992] rounded-3xl px-3 py-2 text-white font-semibold"
+            onClick={handleClick}
+            className={`${
+              itemAdded ? "bg-[#f63a2f]" : "bg-[#0e3a93]"
+            } rounded-lg px-2 py-2 border-[1px] font-medium  text-white`}
           >
-            Add to cart
+            {itemAdded ? "Remove Item" : "Add to cart"}
           </button>
         </div>
       </div>
       <div className="w-full rounded-b-xl flex justify-center">
         <Link to={"/products/" + product.id}>
-          <button onClick={handleProductDetailsClick} className="cursor-pointer text-center font-body font-medium">
+          <button
+            onClick={handleProductDetailsClick}
+            className="text-[#5e666b] cursor-pointer text-center font-body font-medium"
+          >
             Get Product Details
           </button>
         </Link>
