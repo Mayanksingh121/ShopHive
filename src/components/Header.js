@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector} from "react-redux";
 import { Link } from "react-scroll";
 import { toggleOnProductsPage } from "../utils/productSlice";
 import "../utils/css/navItems.css";
@@ -7,12 +7,14 @@ const Header = ({ handleCart }) => {
   const productPage = useSelector((store) => store.product.onProductsPage);
   const dispatch = useDispatch();
 
+
   const handleClickHome = () => {
     dispatch(toggleOnProductsPage());
   };
 
+
   return (
-    <div className="font-body flex justify-between px-5 md:px-10 py-3">
+    <div className="dark:bg-black font-body flex justify-between px-5 md:px-10 py-3">
       <h2 className="font-bold text-2xl md:mx-4">ShopHive</h2>
       <div>
         <ul className="flex justify-evenly py-1 font-semibold">
@@ -50,6 +52,7 @@ const Header = ({ handleCart }) => {
           <li className="cursor-pointer">
             <i className="md:hidden fa-solid fa-bars cursor-pointer"></i>
           </li>
+
         </ul>
       </div>
     </div>
