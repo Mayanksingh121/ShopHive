@@ -20,22 +20,22 @@ const Quantity = ({ itemInCart }) => {
 
   return (
     <div className="flex gap-3">
-      Qty:
+      <p className="text-sm font-medium text-[#564429]">Qty:</p>
       <div className="flex border border-black rounded-2xl">
         <button
           onClick={handleRemove}
-          className="px-2 text-blue-600 font-bold text-2xl"
+          className="px-2 text-blue-600"
         >
-          -
+          <i className="fa-solid fa-minus"></i>
         </button>
-        <p className="font-medium flex items-center border border-black px-3 border-b-0 border-t-0">
+        <p className=" flex justify-center border border-black w-8 border-b-0 border-t-0">
           {itemInCart.quantity}
         </p>
         <button
           onClick={handleAddItem}
-          className=" px-2 text-blue-600 font-bold text-2xl"
+          className=" px-2 text-blue-600"
         >
-          +
+          <i className="fa-solid fa-plus"></i>
         </button>
       </div>
     </div>

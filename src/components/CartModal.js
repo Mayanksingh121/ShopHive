@@ -7,6 +7,7 @@ import EMPTY from "../utils/assets/empty.jpg";
 const CartModal = ({ handleCart }) => {
   const [isVisible, setIsVisible] = useState(false);
 
+
   useEffect(() => {
     setTimeout(() => setIsVisible(true), 10);
   }, []);
@@ -34,15 +35,18 @@ const CartModal = ({ handleCart }) => {
 
           <div className="flex justify-between mx-10 my-4 gap-8">
             <div className="w-full flex flex-col gap-4">
-              {items.length>0
-                ? items.map((item) => {
-                    return <CartItem key={item.id} item={item} />;
-                  })
-                : (<div className="flex flex-col items-center w-full gap-6">
-                  <p className="font-body font-medium text-xl">Your cart is empty</p>
-                  <img className="w-56" src={EMPTY} alt="empty"/>
-                </div> )
-                }
+              {items.length > 0 ? (
+                items.map((item) => {
+                  return <CartItem key={item.id} item={item} />;
+                })
+              ) : (
+                <div className="flex flex-col items-center w-full gap-6">
+                  <p className="font-body font-medium text-xl">
+                    Your cart is empty
+                  </p>
+                  <img className="w-56" src={EMPTY} alt="empty" />
+                </div>
+              )}
             </div>
             <div className="h-72 w-[70%] border border-gray-300 rounded-xl shadow-xl px-5 py-3">
               <BillContainer items={items} />

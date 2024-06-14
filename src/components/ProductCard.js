@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { toast } from "react-toastify";
+import { toast } from "react-hot-toast"
 import { addToCart, removeFromCart } from "../utils/cartSlice";
 import { useState } from "react";
 
@@ -24,8 +24,8 @@ const ProductCard = ({ product }) => {
   const handleProductDetailsClick = () => {};
 
   return (
-    <div className="rounded-xl border shadow-md w-60">
-      <div className="bg-gradient-to-br from-[#5372b1] to-[#0e3a93]  w-60 flex items-center justify-center rounded-t-xl">
+    <div className="rounded-2xl border shadow-md w-60">
+      <div className="bg-gradient-to-br from-[#5372b1] to-[#0e3a93]  w-60 flex items-center justify-center rounded-t-2xl">
         <img className="h-36" src={product.images[0]} alt="productImage"></img>
       </div>
       <div className="p-2">
@@ -46,7 +46,7 @@ const ProductCard = ({ product }) => {
             onClick={handleClick}
             className={`${
               itemAdded ? "bg-[#f63a2f]" : "bg-[#0e3a93]"
-            } rounded-lg px-2 py-2 border-[1px] font-medium  text-white`}
+            } rounded-sm px-2 py-2 border-[1px] font-medium  text-white`}
           >
             {itemAdded ? "Remove Item" : "Add to cart"}
           </button>

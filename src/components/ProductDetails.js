@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import Shimmer from "./Shimmer";
 import useGetAllProducts from "../hooks/useGetAllProducts";
 import ProductReviewCard from "./ProductReviewCard";
-import { toast } from "react-toastify";
+import { toast } from "react-hot-toast";
 import { addToCart, removeFromCart } from "../utils/cartSlice";
 import { useState } from "react";
 
