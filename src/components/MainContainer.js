@@ -1,27 +1,32 @@
 import HOME_IMAGE from "../utils/assets/character.jpg";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { toggleOnProductsPage } from "../utils/productSlice";
 import MAIN_1 from "../utils/assets/main1.jpg";
 import MAIN_2 from "../utils/assets/main2.jpg";
 
 const MainContainer = () => {
   const dispatch = useDispatch();
+  const darkMode = useSelector((store) => store.product.darkMode);
 
   const handleButton = () => {
     dispatch(toggleOnProductsPage());
   };
 
   return (
-    <div className="pt-4 px-3 md:py-3 md:px-5 flex justify-evenly gap-3 md:gap-0">
+    <div
+      className={`${
+        darkMode ? "dark:bg-[#111111]" : ""
+      } pt-4 px-3 md:py-3 md:px-5 flex justify-evenly gap-3 md:gap-0`}
+    >
       <div className="hidden md:flex">
-        <img className="rounded-3xl" src={HOME_IMAGE} alt="home"></img>
+        <img className="rounded-3xl border border-white" src={HOME_IMAGE} alt="home"></img>
       </div>
       <div className="text-center items-center lg:py-16 md:px-2 lg:px-6 flex flex-col gap-2 md:gap-4">
-        <h1 className="font-display font-bold md:text-xl lg:text-6xl md:my-4">
+        <h1 className="font-display dark:text-white font-bold md:text-xl lg:text-6xl md:my-4">
           <span className="font-normal">Your </span>One-Stop Shop for{" "}
           <span className="font-normal">Everything</span>
         </h1>
-        <h2 className="font-display text-sm md:text-lg lg:text-xl md:my-2 lg:my-4">
+        <h2 className="dark:text-white font-display text-sm md:text-lg lg:text-xl md:my-2 lg:my-4">
           Discover Incredible Deals on Clothing, Food, Perfumes, Makeup, and
           More – Delivered Right to Your Doorstep!
         </h2>
@@ -31,7 +36,7 @@ const MainContainer = () => {
         >
           See all
         </button>
-        <h3 className="font-body flex flex-col text-sm md:text-lg lg:text-xl">
+        <h3 className="dark: text-white font-body flex flex-col text-sm md:text-lg lg:text-xl">
           Special Dsicount{" "}
           <span className="md:text-xl font-bold">
             UP TO 50% OFF FOR ALL ITEMS
@@ -41,14 +46,14 @@ const MainContainer = () => {
       <div className="flex flex-col gap-4">
         <div>
           <img
-            className="border-black border-[1px] rounded-3xl"
+            className="border-black dark:border-white border-[1px] rounded-3xl"
             src={MAIN_1}
             alt="main1"
           />
         </div>
         <div>
           <img
-            className="border-black border-[1px] rounded-3xl"
+            className="border-black dark:border-white border-[1px] rounded-3xl"
             src={MAIN_2}
             alt="main2"
           />

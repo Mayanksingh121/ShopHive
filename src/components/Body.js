@@ -11,12 +11,12 @@ import Header from "./Header";
 
 const Body = () => {
   const onProduct = useSelector((store) => store.product.onProductsPage);
-
   const [isCartVisible, setIsCartVisible] = useState(false);
 
   const handleShowCart = () => {
     setIsCartVisible(!isCartVisible);
   };
+
   return (
     <div>
       {isCartVisible && <CartModal handleCart={handleShowCart} />}

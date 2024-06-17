@@ -1,22 +1,51 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-scroll";
-import { toggleOnProductsPage } from "../utils/productSlice";
+import { FaMoon } from "react-icons/fa6";
+import { FaSun } from "react-icons/fa";
+import {toast} from "react-hot-toast";
+import { toggleDarkMode, toggleOnProductsPage } from "../utils/productSlice";
 import "../utils/css/navItems.css";
 
+
 const Header = ({ handleCart }) => {
-  const productPage = useSelector((store) => store.product.onProductsPage);
+  const { onProductsPage, darkMode } = useSelector((store) => store.product);
   const dispatch = useDispatch();
 
   const handleClickHome = () => {
     dispatch(toggleOnProductsPage());
   };
 
+  const handleDarkMode = () => {
+    if (!darkMode) {
+      toast("Dark Mode!", {
+        icon: "👏",
+        style: {
+          borderRadius: "10px",
+          background: "#333",
+          color: "#fff",
+        },
+      });
+    }
+    else{
+      toast("Light Mode!", {
+        icon: "👏",
+        style: {
+          borderRadius: "10px",
+          background: "white",
+          color: "black",
+        },
+      }); 
+    }
+    dispatch(toggleDarkMode());
+    document.body.classList.toggle("dark");
+  };
+
   return (
-    <div className="font-body flex justify-between px-5 md:px-10 py-3">
-      <h2 className="font-bold text-2xl md:mx-4">ShopHive</h2>
+    <div className="dark:bg-[#111111] font-body flex justify-between px-5 md:px-10 py-3">
+      <h2 className="font-bold text-2xl dark:text-white md:mx-4">ShopHive</h2>
       <div>
-        <ul className="flex justify-evenly py-1 font-semibold">
-          {!productPage && (
+        <ul className="flex justify-evenly py-1 font-semibold dark:text-white">
+          {!onProductsPage && (
             <Link to="about" smooth={true} duration={500}>
               <li className="hidden md:block px-4 cursor-pointer navbar-item">
                 About us
@@ -24,7 +53,7 @@ const Header = ({ handleCart }) => {
             </Link>
           )}
 
-          {!productPage && (
+          {!onProductsPage && (
             <Link to="trending" smooth={true} duration={500}>
               <li className="hidden md:block px-4 cursor-pointer navbar-item">
                 Trending
@@ -32,7 +61,7 @@ const Header = ({ handleCart }) => {
             </Link>
           )}
 
-          {productPage && (
+          {onProductsPage && (
             <li
               onClick={handleClickHome}
               className="px-4 cursor-pointer navbar-item"
@@ -44,6 +73,21 @@ const Header = ({ handleCart }) => {
           <li onClick={handleCart} className="px-4 cursor-pointer navbar-item">
             Cart <i className="fa-solid fa-cart-shopping"></i>
           </li>
+          {!darkMode ? (
+            <li
+              onClick={handleDarkMode}
+              className="text-xl px-4 cursor-pointer"
+            >
+              <FaMoon />
+            </li>
+          ) : (
+            <li
+              onClick={handleDarkMode}
+              className="text-xl px-4 cursor-pointer"
+            >
+              <FaSun />
+            </li>
+          )}
         </ul>
       </div>
     </div>

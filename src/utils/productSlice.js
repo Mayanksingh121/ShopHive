@@ -6,6 +6,7 @@ const productSlice = createSlice({
     trendingProducts: [],
     allProducts: [],
     onProductsPage: false,
+    darkMode: false,
   },
   reducers: {
     addTrendingProducts: (state, action) => {
@@ -17,9 +18,16 @@ const productSlice = createSlice({
     toggleOnProductsPage: (state) => {
       state.onProductsPage = !state.onProductsPage;
     },
+    toggleDarkMode: (state) => {
+      state.darkMode = !state.darkMode;
+    },
   },
 });
 
-export const { addTrendingProducts, addAllProducts, toggleOnProductsPage } =
-  productSlice.actions;
+export const {
+  addTrendingProducts,
+  addAllProducts,
+  toggleOnProductsPage,
+  toggleDarkMode,
+} = productSlice.actions;
 export default productSlice.reducer;

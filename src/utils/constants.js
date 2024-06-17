@@ -55,9 +55,9 @@ export const CUSTOMER_REVIEWS = [
 ];
 
 export const customerData = [
-  { Year: "2020", uv: 400, customer: 90000 },
-  { Year: "2021", uv: 300, customer: 150000 },
-  { Year: "2022", uv: 300, customer: 250000 },
-  { Year: "2023", uv: 300, customer: 350000 },
-  { Year: "2024", uv: 300, customer: 550000 },
+  { Year: "2020", customer: 90000 },
+  { Year: "2021", customer: 150000 },
+  { Year: "2022", customer: 250000 },
+  { Year: "2023", customer: 350000 },
+  { Year: "2024", customer: 550000 },
 ];

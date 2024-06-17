@@ -28,7 +28,7 @@ const Quantity = ({ itemInCart }) => {
         >
           <i className="fa-solid fa-minus"></i>
         </button>
-        <p className=" flex justify-center border border-black w-8 border-b-0 border-t-0">
+        <p className=" flex justify-center text-black border border-black w-8 border-b-0 border-t-0">
           {itemInCart.quantity}
         </p>
         <button

@@ -5,13 +5,19 @@ import useGetAllProducts from "../hooks/useGetAllProducts";
 
 const AllProducts = () => {
   useGetAllProducts();
-  const allProductsInStore = useSelector(
-    (store) => store.product?.allProducts?.products
+  const { allProducts, darkMode } = useSelector(
+    (store) => store.product
   );
 
+  const allProductsInStore = allProducts?.products;
   const shimmerCount = 30;
+
   return (
-    <div className="flex flex-col w-full justify-center">
+    <div
+      className={` ${
+        darkMode ? "dark:bg-[#111111]" : ""
+      } flex flex-col w-full justify-center dark:text-white`}
+    >
       <h2 className="my-4 text-2xl font-display font-medium text-center">
         Our Products
       </h2>

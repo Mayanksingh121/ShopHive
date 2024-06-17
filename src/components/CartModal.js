@@ -2,29 +2,21 @@ import { useEffect, useState } from "react";
 import BillContainer from "./BillContainer";
 import { useSelector } from "react-redux";
 import CartItem from "./CartItem";
-import EMPTY from "../utils/assets/empty.jpg";
+import { motion } from "framer-motion";
+import EMPTY from "../utils/assets/empty.png";
 
 const CartModal = ({ handleCart }) => {
-  const [isVisible, setIsVisible] = useState(false);
-
-
-  useEffect(() => {
-    setTimeout(() => setIsVisible(true), 10);
-  }, []);
-
   const items = useSelector((store) => store.cart?.cartItems);
+  const darkMode = useSelector((store)=>store.product.darkMode);
 
   return (
-    <div
-      className={`fixed z-50 w-full h-full bg-black bg-opacity-60 transition-opacity duration-500 ${
-        isVisible ? "opacity-100" : "opacity-0"
-      }`}
+    <motion.div
+      className="fixed z-50 w-full h-full bg-black bg-opacity-60"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 100 }}
+      transition={{ delay: 0.1 }}
     >
-      <div
-        className={`bg-white w-[80%] h-[90%] mx-auto my-8 overflow-y-scroll transition-all duration-500 transform ${
-          isVisible ? "translate-y-0" : "-translate-y-40"
-        }`}
-      >
+      <div className={`${darkMode? "dark:bg-[#111111]":""}  dark:text-white bg-white w-[80%] h-[90%] mx-auto my-8 overflow-y-scroll`}>
         <div>
           <div className="flex justify-between mx-6 mt-5">
             <h2 className="font-display font-bold text-xl">Your Cart</h2>
@@ -44,17 +36,22 @@ const CartModal = ({ handleCart }) => {
                   <p className="font-body font-medium text-xl">
                     Your cart is empty
                   </p>
-                  <img className="w-56" src={EMPTY} alt="empty" />
+                  <img className="bg-white w-56" src={EMPTY} alt="empty" />
                 </div>
               )}
             </div>
-            <div className="h-72 w-[70%] border border-gray-300 rounded-xl shadow-xl px-5 py-3">
+            <motion.div
+              className="bg-white text-black h-72 w-[70%] border border-gray-300 rounded-xl shadow-xl px-5 py-3"
+              initial={{ x: 450 }}
+              animate={{ x: 0 }}
+              transition={{ delay: 0.2 }}
+            >
               <BillContainer items={items} />
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

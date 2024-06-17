@@ -9,11 +9,11 @@ const CartItem = ({ item }) => {
   };
 
   return (
-    <div className="w-full border-[1px] border-gray-300 rounded-xl shadow-lg pr-2">
+    <div className="w-full border-[1px] bg-white  border-gray-300 rounded-xl shadow-lg pr-2">
       <div className="pt-1">
         <i
           onClick={handleRemoveFromCart}
-          className="flex justify-end fa-solid fa-xmark cursor-pointer"
+          className="text-black flex justify-end fa-solid fa-xmark cursor-pointer"
         ></i>
       </div>
       <div className="flex">
@@ -22,7 +22,7 @@ const CartItem = ({ item }) => {
         </div>
         <div className="w-[60%] flex flex-col">
           <div className="text-center">
-            <h2 className="font-body font-bold text-xl mb-2">{item.title}</h2>
+            <h2 className="text-black font-body font-bold text-xl mb-2">{item.title}</h2>
             <div className="font-body flex flex-col items-start gap-1">
               <p className="text-sm font-medium text-[#564429]">Category: {item.category}</p>
               <p className="text-sm font-medium text-[#564429]">Rating: {item.rating}</p>

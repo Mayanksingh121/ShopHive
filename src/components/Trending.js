@@ -6,14 +6,18 @@ import Shimmer from "./Shimmer";
 const Trending = () => {
   useGetTrendingData();
 
-  const trendingData = useSelector(
-    (store) => store.product?.trendingProducts?.products
-  );
+  const { trendingProducts, darkMode } = useSelector((store) => store.product);
 
+  const trendingData = trendingProducts?.products;
   const shimmerCount = 10;
 
   return (
-    <div id="trending" className="p-4 md:p-6">
+    <div
+      id="trending"
+      className={`${
+        darkMode ? "dark:bg-[#111111]" : ""
+      } p-4 md:p-6 dark:text-white`}
+    >
       <h2 className="font-display text-xl md:text-2xl">Trending</h2>
       <div className="flex gap-6 overflow-x-scroll hide-scrollbar py-6">
         {trendingData
