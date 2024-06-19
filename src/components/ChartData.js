@@ -7,13 +7,14 @@ const ChartData = () => {
   return (
     <Line
       data={{
-        labels: customerData.map((data)=> data.Year),
+        labels: customerData.map((data) => data.Year),
         datasets: [
           {
             label: "Customers",
-            data: customerData.map((data)=> data.customer), 
+            data: customerData.map((data) => data.customer),
             borderColor: "red",
-            backgroundColor: "red"
+            backgroundColor: "red",
+            color: "red",
           },
         ],
       }}

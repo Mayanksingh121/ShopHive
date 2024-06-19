@@ -1,13 +1,12 @@
-import { useEffect, useState } from "react";
 import BillContainer from "./BillContainer";
 import { useSelector } from "react-redux";
 import CartItem from "./CartItem";
 import { motion } from "framer-motion";
-import EMPTY from "../utils/assets/empty.png";
+import EMPTY from "../../utils/assets/empty.png";
 
 const CartModal = ({ handleCart }) => {
   const items = useSelector((store) => store.cart?.cartItems);
-  const darkMode = useSelector((store)=>store.product.darkMode);
+  const darkMode = useSelector((store) => store.product.darkMode);
 
   return (
     <motion.div
@@ -16,7 +15,11 @@ const CartModal = ({ handleCart }) => {
       animate={{ opacity: 100 }}
       transition={{ delay: 0.1 }}
     >
-      <div className={`${darkMode? "dark:bg-[#111111]":""}  dark:text-white bg-white w-[80%] h-[90%] mx-auto my-8 overflow-y-scroll`}>
+      <div
+        className={`${
+          darkMode ? "dark:bg-[#111111]" : ""
+        }  dark:text-white bg-white w-[80%] h-[90%] mx-auto my-8 overflow-y-scroll`}
+      >
         <div>
           <div className="flex justify-between mx-6 mt-5">
             <h2 className="font-display font-bold text-xl">Your Cart</h2>

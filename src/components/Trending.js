@@ -15,7 +15,7 @@ const Trending = () => {
     <div
       id="trending"
       className={`${
-        darkMode ? "dark:bg-[#111111]" : ""
+        darkMode ? "dark:bg-[#000000]" : ""
       } p-4 md:p-6 dark:text-white`}
     >
       <h2 className="font-display text-xl md:text-2xl">Trending</h2>

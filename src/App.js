@@ -1,6 +1,6 @@
 import Body from "./components/Body";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import ProductDetails from "./components/ProductDetails";
+import ProductDetails from "./components/ProductDetailsComponents/ProductDetails";
 
 
 const appRouter = createBrowserRouter([

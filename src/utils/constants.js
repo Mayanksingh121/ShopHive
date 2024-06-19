@@ -33,24 +33,42 @@ export const PRESENT_STATISTICS = [
   },
 ];
 
-export const CUSTOMER_REVIEWS = [
+export const customerReviews = [
   {
-    id: 1,
-    name: "Jonathan Amral",
-    comment:
-      "I recently bought some makeup from Shophive, and I'm very pleased with the products. The site is easy to navigate, and the checkout process is straightforward. The only thing I'd suggest is adding a live chat support feature for quicker assistance.",
+    name: "Jack",
+    username: "@jack",
+    body: "I've never seen anything like ShopHive. It's amazing. I love it.",
+    img: "https://www.shutterstock.com/image-photo/young-indian-businessman-wearing-elegant-260nw-1530789833.jpg",
   },
   {
-    id: 2,
-    name: "Alexendra Botez",
-    comment:
-      "Shophive has an impressive range of food items. The quality is always top-notch, and delivery is quick. However, I think the website could benefit from more detailed product descriptions, especially for furniture items. I just love ShopHive",
+    name: "Jill",
+    username: "@jill",
+    body: "Bought lot of furniture for my new house. This is amazing.",
+    img: "https://st4.depositphotos.com/2024219/28913/i/450/depositphotos_289139744-stock-photo-handsome-man-yellow-background-surprise.jpg",
   },
   {
-    id: 3,
-    name: "Tania Sachdev",
-    comment:
-      "I love the variety of products available on Shophive! From makeup to furniture, I can find everything I need in one place. The user interface is smooth, and the search functionality is quite efficient. Definitely my go-to site for online shopping!",
+    name: "John",
+    username: "@john",
+    body: "Wow! The amout of diverse product ShopHive have is amazing. I love it.",
+    img: "https://img.freepik.com/free-photo/young-handsome-man-wearing-casual-tshirt-blue-background-happy-face-smiling-with-crossed-arms-looking-camera-positive-person_839833-12963.jpg",
+  },
+  {
+    name: "Jane",
+    username: "@jane",
+    body: "My go to place for shopping. Surely recommended.",
+    img: "https://st2.depositphotos.com/2024219/47854/i/450/depositphotos_478548142-stock-photo-young-caucasian-woman-isolated-yellow.jpg",
+  },
+  {
+    name: "Jenny",
+    username: "@jenny",
+    body: "Just try it and you will fall in love with it.",
+    img: "https://www.shutterstock.com/image-photo/photo-happy-delighted-woman-black-260nw-1024694347.jpg",
+  },
+  {
+    name: "James",
+    username: "@james",
+    body: "Amaze to see their fast delievery service. Just love it.",
+    img: "https://a.storyblok.com/f/191576/1048x786/314ec318ba/blue-background-3.png",
   },
 ];
 

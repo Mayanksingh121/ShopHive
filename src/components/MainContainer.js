@@ -15,7 +15,7 @@ const MainContainer = () => {
   return (
     <div
       className={`${
-        darkMode ? "dark:bg-[#111111]" : ""
+        darkMode ? "dark:bg-[#000000]" : ""
       } pt-4 px-3 md:py-3 md:px-5 flex justify-evenly gap-3 md:gap-0`}
     >
       <div className="hidden md:flex">
@@ -36,7 +36,7 @@ const MainContainer = () => {
         >
           See all
         </button>
-        <h3 className="dark: text-white font-body flex flex-col text-sm md:text-lg lg:text-xl">
+        <h3 className="dark:text-white font-body flex flex-col text-sm md:text-lg lg:text-xl">
           Special Dsicount{" "}
           <span className="md:text-xl font-bold">
             UP TO 50% OFF FOR ALL ITEMS

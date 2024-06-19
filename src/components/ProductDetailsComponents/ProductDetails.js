@@ -1,11 +1,11 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import Shimmer from "./Shimmer";
-import useGetAllProducts from "../hooks/useGetAllProducts";
+import Shimmer from "../Shimmer";
+import useGetAllProducts from "../../hooks/useGetAllProducts";
 import ProductReviewCard from "./ProductReviewCard";
 import { toast } from "react-hot-toast";
-import { addToCart, removeFromCart } from "../utils/cartSlice";
+import { addToCart, removeFromCart } from "../../utils/cartSlice";
 import { useState } from "react";
 
 const ProductDetails = () => {
@@ -31,18 +31,18 @@ const ProductDetails = () => {
   };
 
   return (
-    <div className="flex flex-col">
+    <div className="dark:bg-[#111111] h-screen flex flex-col dark:text-white px-4">
       <h2 className="my-4 font-display text-center text-3xl">
         Product Details
       </h2>
       {reqProduct ? (
         <div className="flex font-body gap-5">
           <div>
-            <div className="h-60">
+            <div className="bg-white h-100 rounded-lg">
               <img className="h-96" alt="product" src={reqProduct.images[0]} />
             </div>
           </div>
-          <div className="mt-6 px-2">
+          <div className="mt-2 px-2">
             {reqProduct.brand && (
               <h3 className="font-medium text-2xl">
                 Brand: {reqProduct.brand}

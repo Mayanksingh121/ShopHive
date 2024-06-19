@@ -2,11 +2,11 @@ import MainContainer from "./MainContainer";
 import AboutUs from "./AboutUs";
 import Trending from "./Trending";
 import Footer from "./Footer";
-import CustomerReviews from "./CustomerReviews";
+import CustomerReviews from "./CustomerReviewComponents/CustomerReviews";
 import { useSelector } from "react-redux";
 import AllProducts from "./AllProducts";
 import { useState } from "react";
-import CartModal from "./CartModal";
+import CartModal from "./CartModalComponents/CartModal";
 import Header from "./Header";
 
 const Body = () => {

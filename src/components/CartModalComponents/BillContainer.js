@@ -1,6 +1,6 @@
-import React from "react";
 
 const BillContainer = ({ items }) => {
+  
   const getTotalPrice = (acc, curr) => {
     const quantity = curr.quantity;
     acc += quantity * curr.price;

@@ -41,7 +41,7 @@ const Header = ({ handleCart }) => {
   };
 
   return (
-    <div className="dark:bg-[#111111] font-body flex justify-between px-5 md:px-10 py-3">
+    <div className="dark:bg-[#000000] font-body flex justify-between px-5 md:px-10 py-3">
       <h2 className="font-bold text-2xl dark:text-white md:mx-4">ShopHive</h2>
       <div>
         <ul className="flex justify-evenly py-1 font-semibold dark:text-white">

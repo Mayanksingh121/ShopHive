@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { toast } from "react-hot-toast"
+import { toast } from "react-hot-toast";
 import { addToCart, removeFromCart } from "../utils/cartSlice";
 import { useState } from "react";
 
@@ -21,14 +21,12 @@ const ProductCard = ({ product }) => {
     }
   };
 
-  const handleProductDetailsClick = () => {};
-
   return (
-    <div className="rounded-2xl border shadow-md  w-60">
+    <div className="rounded-2xl border dark:border-[#151515] shadow-md  w-60">
       <div className="bg-gradient-to-br from-[#5372b1] to-[#0e3a93]  w-60 flex items-center justify-center rounded-t-2xl">
         <img className="h-36" src={product.images[0]} alt="productImage"></img>
       </div>
-      <div className="p-2">
+      <div className="dark:bg-[#010101] p-2">
         <h3 className="font-body font-medium text-[#5e666b] dark:text-white h-12 text-sm">
           {product.title}
         </h3>
@@ -55,7 +53,6 @@ const ProductCard = ({ product }) => {
       <div className="w-full rounded-b-xl flex justify-center">
         <Link to={"/products/" + product.id}>
           <button
-            onClick={handleProductDetailsClick}
             className="text-[#5e666b] dark:text-white cursor-pointer text-center font-body font-medium"
           >
             Get Product Details

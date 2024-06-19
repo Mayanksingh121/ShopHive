@@ -4,7 +4,7 @@ const Footer = () => {
 
   const darkMode = useSelector(store=>store.product.darkMode);
   return (
-    <div className={`${darkMode?"dark:bg-[#111111]":""} bg-[#0b3a94] w-full`}>
+    <div className={`${darkMode?"dark:bg-[#000000]":""} bg-[#0b3a94] w-full`}>
       <div className="flex justify-between items-center">
         <div className="border-b-2 border-white  w-1/3"></div>
         <div className="flex gap-4 md:gap-8">

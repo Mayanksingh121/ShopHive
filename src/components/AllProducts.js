@@ -15,7 +15,7 @@ const AllProducts = () => {
   return (
     <div
       className={` ${
-        darkMode ? "dark:bg-[#111111]" : ""
+        darkMode ? "dark:bg-[#000000]" : ""
       } flex flex-col w-full justify-center dark:text-white`}
     >
       <h2 className="my-4 text-2xl font-display font-medium text-center">

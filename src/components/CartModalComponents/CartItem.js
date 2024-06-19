@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { removeFromCart } from "../utils/cartSlice";
+import { removeFromCart } from "../../utils/cartSlice";
 import Quantity from "./Quantity";
 const CartItem = ({ item }) => {
   const dispatch = useDispatch();
@@ -22,11 +22,19 @@ const CartItem = ({ item }) => {
         </div>
         <div className="w-[60%] flex flex-col">
           <div className="text-center">
-            <h2 className="text-black font-body font-bold text-xl mb-2">{item.title}</h2>
+            <h2 className="text-black font-body font-bold text-xl mb-2">
+              {item.title}
+            </h2>
             <div className="font-body flex flex-col items-start gap-1">
-              <p className="text-sm font-medium text-[#564429]">Category: {item.category}</p>
-              <p className="text-sm font-medium text-[#564429]">Rating: {item.rating}</p>
-              <p className="text-sm font-medium mb-2 text-[#564429]">Price: ${item.price}</p>
+              <p className="text-sm font-medium text-[#564429]">
+                Category: {item.category}
+              </p>
+              <p className="text-sm font-medium text-[#564429]">
+                Rating: {item.rating}
+              </p>
+              <p className="text-sm font-medium mb-2 text-[#564429]">
+                Price: ${item.price}
+              </p>
             </div>
             <Quantity itemInCart={item} />
           </div>
