@@ -1,6 +1,6 @@
+import { Link } from "react-router-dom";
 
 const BillContainer = ({ items }) => {
-  
   const getTotalPrice = (acc, curr) => {
     const quantity = curr.quantity;
     acc += quantity * curr.price;
@@ -8,11 +8,11 @@ const BillContainer = ({ items }) => {
   };
 
   const getTotalItems = (acc, curr) => {
-    acc = acc+curr.quantity;
+    acc = acc + curr.quantity;
     return acc;
   };
 
-  const totalItems = items.reduce(getTotalItems,0);
+  const totalItems = items.reduce(getTotalItems, 0);
   const totalPrice = items.reduce(getTotalPrice, 0).toFixed();
 
   return (
@@ -38,10 +38,17 @@ const BillContainer = ({ items }) => {
           <h2 className="font-body text-lg">${totalPrice}</h2>
         </div>
         <div className="text-center pt-2 pb-4">
-          <button className="font-semibold font-body text-white  bg-[#0e3a93] px-20 py-2 rounded-full ">
-            Checkout
-          </button>
-          <p className="py-2 font-body text-sm font-medium">This Site is protected by google Privacy Policy and Terms of Services.</p>
+          {items.length > 0 && (
+            <Link to="/customerDetails">
+              <button className="font-semibold font-body text-white  bg-[#6c63fe] px-10 py-1 md:px-20 md:py-2 rounded-full ">
+                Checkout
+              </button>
+            </Link>
+          )}
+          <p className="py-2 font-body text-sm font-medium">
+            This Site is protected by google Privacy Policy and Terms of
+            Services.
+          </p>
         </div>
       </div>
     </>

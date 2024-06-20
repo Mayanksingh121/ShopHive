@@ -17,8 +17,8 @@ const CartModal = ({ handleCart }) => {
     >
       <div
         className={`${
-          darkMode ? "dark:bg-[#111111]" : ""
-        }  dark:text-white bg-white w-[80%] h-[90%] mx-auto my-8 overflow-y-scroll`}
+          darkMode ? "dark:bg-[#232222]" : ""
+        }  dark:text-white bg-white w-[90%] rounded-xl md:w-[80%] h-[80%] md:h-[90%] mx-auto my-8 overflow-y-scroll`}
       >
         <div>
           <div className="flex justify-between mx-6 mt-5">
@@ -28,7 +28,7 @@ const CartModal = ({ handleCart }) => {
             </span>
           </div>
 
-          <div className="flex justify-between mx-10 my-4 gap-8">
+          <div className="flex flex-col md:flex-row items-center md:items-start justify-between mx-10 my-4 gap-8">
             <div className="w-full flex flex-col gap-4">
               {items.length > 0 ? (
                 items.map((item) => {
@@ -39,12 +39,12 @@ const CartModal = ({ handleCart }) => {
                   <p className="font-body font-medium text-xl">
                     Your cart is empty
                   </p>
-                  <img className="bg-white w-56" src={EMPTY} alt="empty" />
+                  <img className="w-72" src={EMPTY} alt="empty" />
                 </div>
               )}
             </div>
             <motion.div
-              className="bg-white text-black h-72 w-[70%] border border-gray-300 rounded-xl shadow-xl px-5 py-3"
+              className="dark:bg-[#19191a] dark:text-white h-72 w-full md:w-[70%] border border-[#1c1c1d] rounded-xl shadow-xl px-5 py-3"
               initial={{ x: 450 }}
               animate={{ x: 0 }}
               transition={{ delay: 0.2 }}

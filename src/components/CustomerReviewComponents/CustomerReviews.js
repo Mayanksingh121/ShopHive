@@ -10,7 +10,7 @@ const CustomerReviews = () => {
         darkMode ? "dark:bg-[#000000]" : ""
       } flex flex-col p-4 pb-10 md:pb-20`}
     >
-      <h2 className="dark:text-white font-display text-xl md:text-2xl px-6">
+      <h2 className="dark:text-white font-display text-xl md:text-2xl px-2">
         Customer Reviews
       </h2>
       <div className="dark:text-white mt-2">

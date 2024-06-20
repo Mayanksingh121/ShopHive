@@ -19,9 +19,9 @@ const Quantity = ({ itemInCart }) => {
   };
 
   return (
-    <div className="flex gap-3">
-      <p className="text-sm font-medium text-[#564429]">Qty:</p>
-      <div className="flex border border-black rounded-2xl">
+    <div className="flex gap-3 my-2">
+      <p className="text-sm font-medium text-[#564429] dark:text-white">Qty:</p>
+      <div className="flex border border-black dark:bg-white rounded-2xl">
         <button
           onClick={handleRemove}
           className="px-2 text-blue-600"

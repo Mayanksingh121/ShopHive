@@ -42,7 +42,7 @@ const Header = ({ handleCart }) => {
 
   return (
     <div className="dark:bg-[#000000] font-body flex justify-between px-5 md:px-10 py-3">
-      <h2 className="font-bold text-2xl dark:text-white md:mx-4">ShopHive</h2>
+      <h2 className="font-bold text-xl md:text-2xl dark:text-white md:mx-4">ShopHive</h2>
       <div>
         <ul className="flex justify-evenly py-1 font-semibold dark:text-white">
           {!onProductsPage && (
@@ -64,26 +64,26 @@ const Header = ({ handleCart }) => {
           {onProductsPage && (
             <li
               onClick={handleClickHome}
-              className="px-4 cursor-pointer navbar-item"
+              className="px-3 md:px-4 cursor-pointer navbar-item"
             >
               Home
             </li>
           )}
 
-          <li onClick={handleCart} className="px-4 cursor-pointer navbar-item">
+          <li onClick={handleCart} className="px-3 md:px-4 cursor-pointer navbar-item">
             Cart <i className="fa-solid fa-cart-shopping"></i>
           </li>
           {!darkMode ? (
             <li
               onClick={handleDarkMode}
-              className="text-xl px-4 cursor-pointer"
+              className="text-xl pl-3 md:px-4 cursor-pointer"
             >
               <FaMoon />
             </li>
           ) : (
             <li
               onClick={handleDarkMode}
-              className="text-xl px-4 cursor-pointer"
+              className="text-xl pl-3 md:px-4 cursor-pointer"
             >
               <FaSun />
             </li>
