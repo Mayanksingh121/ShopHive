@@ -18,11 +18,11 @@ const CartItem = ({ item }) => {
       </div>
       <div className="flex">
         <div className="w-[40%] flex justify-center">
-          <img className="h-36 md:h-44" src={item.images[0]} alt="item" />
+          <img className="h-36 lg:h-44" src={item.images[0]} alt="item" />
         </div>
         <div className="w-[60%] flex flex-col">
           <div>
-            <h2 className="dark:text-white font-body font-bold text-medium md:text-xl mb-2">
+            <h2 className="dark:text-white font-body font-bold text-medium lg:text-xl mb-2">
               {item.title}
             </h2>
             <div className="font-body flex flex-col items-start gap-1 text-[#564429] dark:text-white">

@@ -31,7 +31,7 @@ const ProductCard = ({ product }) => {
           {product.title}
         </h3>
         <p>
-          <span className="mr-1 md:mr-2 px-2 py-1 rounded-xl text-xs md:text-sm border text-[#5e666b] dark:text-white border-[#d8f1ee] dark:border-white">
+          <span className="md:mr-2 px-2 py-1 rounded-xl text-xs md:text-sm border text-[#5e666b] dark:text-white border-[#d8f1ee] dark:border-white">
             {product.tags[0]}
           </span>
           {product.tags[1] && <span className="px-2 py-1 rounded-xl text-xs md:text-sm border text-[#5e666b] dark:text-white border-[#d8f1ee]">

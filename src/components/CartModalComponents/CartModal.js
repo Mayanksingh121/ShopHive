@@ -18,7 +18,7 @@ const CartModal = ({ handleCart }) => {
       <div
         className={`${
           darkMode ? "dark:bg-[#232222]" : ""
-        }  dark:text-white bg-white w-[90%] rounded-xl md:w-[80%] h-[80%] md:h-[90%] mx-auto my-8 overflow-y-scroll`}
+        }  dark:text-white bg-white w-[95%] rounded-xl lg:w-[80%] h-[80%] md:h-[90%] mx-auto my-8 overflow-y-scroll`}
       >
         <div>
           <div className="flex justify-between mx-6 mt-5">
